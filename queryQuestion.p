@@ -1,4 +1,5 @@
-/*
+One -----
+
 DEFINE QUERY qEmp FOR Employee.
 OPEN QUERY qEmp FOR EACH Employee.
 GET FIRST qEmp.
@@ -8,8 +9,10 @@ DO WHILE AVAIL(Employee):
       GET NEXT qEmp.
       PAUSE.
 END.
-CLOSE QUERY qEmp.         */
- /*
+CLOSE QUERY qEmp.
+
+Two -----
+
 DEFINE QUERY qEmp FOR Employee.
 OPEN QUERY qEmp FOR EACH Employee 
             WHERE employee.DeptCode = "400".
@@ -19,9 +22,10 @@ DO WHILE AVAIL(Employee):
         GET NEXT qEmp.
         PAUSE.
 END.
-CLOSE QUERY qEmp.       */
+CLOSE QUERY qEmp.
 
-/*
+Three -----
+
 DEFINE QUERY qEmp FOR Employee.
 OPEN QUERY  qEmp FOR EACH Employee BY Employee.firstName.
 GET FIRST qEmp.
@@ -32,8 +36,9 @@ DO WHILE AVAIL(Employee):
         PAUSE.
 END.
 
-CLOSE QUERY qEmp.         */
- /*
+CLOSE QUERY qEmp.  
+
+Four ------
 
 DEFINE QUERY qCust FOR Customer.
 DEFINE VARIABLE iCount AS INTEGER     NO-UNDO.
@@ -47,9 +52,9 @@ DO WHILE AVAIL(Customer):
         PAUSE.
         IF iCount = 10 THEN   LEAVE.      
 END.
-CLOSE QUERY qCust.                         */
+CLOSE QUERY qCust.   
 
-/*
+Five -------
 
 DEFINE QUERY qOrder FOR Order.
 DEFINE VARIABLE dToday AS DATE        NO-UNDO.
@@ -68,32 +73,11 @@ DO WHILE AVAIL(Order):
           GET NEXT qOrder.
           PAUSE.
 END.
-CLOSE QUERY qOrder.      */
+CLOSE QUERY qOrder.     
 
+--------------------------------
+All Order Showing =>>>>>>>>>>>>>
 
-  /*
 FOR EACH order:
          DISP   Order WITH 2 COL TITLE "Order Details".
-END.    */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+END.  
